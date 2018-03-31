@@ -1,3 +1,9 @@
 admin_homepage:
     path:     /
     defaults: { _controller: AdminBundle:Default:index }
+
+
+admin_security:
+    path : /users
+    defaults:
+      _controller: AdminBundle:Security:index
