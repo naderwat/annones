@@ -7,3 +7,29 @@ admin_security:
     path : /users
     defaults:
       _controller: AdminBundle:Security:index
+
+
+admin_marques:
+   path : /marques
+   defaults: 
+     _controller : AdminBundle:Marques:index
+
+admin_marques_add:
+    path: /marques/ajout
+    defaults:
+     _controller: AdminBundle:Marques:add   
+
+admin_marques_edit:
+    path: /marques/edit/{id}
+    defaults:
+      _controller: AdminBundle:Marques:edit
+    requirements:
+      id: \d+
+
+admin_marques_delete:
+    path: /marques/delete/{id}
+    defaults:
+      _controller: AdminBundle:Marques:delete
+    requirements:
+      id: \d+
+

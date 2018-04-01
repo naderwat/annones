@@ -3,6 +3,16 @@
  {% block title %} {{ parent()}} -annonces {% endblock %}
 
 {% block body %}
+
+	<div class="row">
+
+        
+
+       
+
+     
+
+     
  <div class="col-md-4 grid_listing">
           <div class="product-listing-m gray-bg">
             <div class="product-listing-img"> <a href="#"><img src="{{ asset('assets_front/') }}assets/images/featured-img-1.jpg" class="img-responsive" alt="image" /> </a>
@@ -291,4 +301,18 @@
             </div>
           </div>
         </div>
+
+         </div>
+
+      <div class="pagination">
+        <ul>
+          <li class="current">1</li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+        </ul>
+      </div>
+
+      
 {% endblock %}

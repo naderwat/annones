@@ -10,4 +10,12 @@ class FrontController extends Controller
     {
         return $this->render('FrontBundle:Default:index.html.twig');
     }
+
+
+    public function asideAction()
+    {
+    	return $this->render('FrontBundle:Default:aside.html.twig');
+    }
+
+    
 }
