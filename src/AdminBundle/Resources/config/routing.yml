@@ -12,24 +12,24 @@ admin_security:
 admin_marques:
    path : /marques
    defaults: 
-     _controller : AdminBundle:Marques:index
+     _controller : AdminBundle:Marque:index
 
 admin_marques_add:
     path: /marques/ajout
     defaults:
-     _controller: AdminBundle:Marques:add   
+     _controller: AdminBundle:Marque:add   
 
 admin_marques_edit:
     path: /marques/edit/{id}
     defaults:
-      _controller: AdminBundle:Marques:edit
+      _controller: AdminBundle:Marque:edit
     requirements:
       id: \d+
 
 admin_marques_delete:
     path: /marques/delete/{id}
     defaults:
-      _controller: AdminBundle:Marques:delete
+      _controller: AdminBundle:Marque:delete
     requirements:
       id: \d+
 

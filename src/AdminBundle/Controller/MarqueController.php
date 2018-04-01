@@ -12,7 +12,7 @@ class MarqueController extends Controller
 	public function indexAction()
 	{
 
-		return $this->render('AdminBundle:Marque:index.html.twig')
+		return $this->render('AdminBundle:Marque:index.html.twig');
 
 	}
 
