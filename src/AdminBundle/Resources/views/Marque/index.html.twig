@@ -3,7 +3,59 @@
 
 {% block body %}
 
+  <a style="margin:1px;" href="{{path('admin_marques_add')}}" class="btn btn-success"><span class="fa fa-plus-circle"></span>&nbsp;Ajouter</a>
+  <div class="card mb-3">
 
 
+        <div class="card-header" style="background-color: #8B0000;color:#FFF">
+          <i class="fa fa-table"></i> Liste de marques</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>#</th>
+                   <th>Logo</th>
+                  <th>Nom de marque</th>
+                  <th>Ajouté le </th>
+                  <th>Ajouté par </th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>#</th>
+                  <th>Logo</th>
+                  <th>Nom de marque</th>
+                  <th>Ajouté le </th>
+                  <th>Ajouté par </th>
+                  <th>Actions</th>
+                </tr>
+              </tfoot>
+              <tbody>
+
+              	{% for marque in marques %}
+              		<tr>
+              			<td>{{marque.id}}</td>
+              			<td>{{marque.logo}}</td>
+              			<td>{{marque.titre}}</td>
+              			<td>{{marque.dateAjout |date('Y-m-d')}}</td>
+              			<td>{{marque.user.username}}</td>
+              			<td>
+
+              				<a style="margin:1px;" href="{{path('admin_marques_add')}}" class="btn btn-info"><span class="fa fa-edit"></span>&nbsp;</a>
+              				<a style="margin:1px;" href="{{path('admin_marques_add')}}" class="btn btn-danger"><span class="fa fa-trash"></span>&nbsp;</a>
+
+
+              			</td>
+              		</tr>
+              	{% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
 
 {% endblock %}
